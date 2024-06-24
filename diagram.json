@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 23.25, "left": -85.18, "attrs": {} },
+    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -101.46, "left": 58.33, "attrs": {} }
+  ],
+  "connections": [
+    [ "rgb1:COM", "uno:5V", "black", [ "v55.23", "h-158.37", "v240.73", "h160.27" ] ],
+    [ "rgb1:R", "uno:11", "red", [ "v0" ] ],
+    [ "rgb1:G", "uno:10", "blue", [ "v0" ] ],
+    [ "rgb1:B", "uno:9", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
