@@ -3,14 +3,17 @@
   "author": "Anonymous maker",
   "editor": "wokwi",
   "parts": [
-    { "type": "wokwi-arduino-uno", "id": "uno", "top": 23.25, "left": -85.18, "attrs": {} },
-    { "type": "wokwi-rgb-led", "id": "rgb1", "top": -101.46, "left": 58.33, "attrs": {} }
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 85.33, "left": -12.67, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -30,
+      "left": 133.33,
+      "attrs": { "volume": "0.1" }
+    }
   ],
   "connections": [
-    [ "rgb1:COM", "uno:5V", "black", [ "v55.23", "h-158.37", "v240.73", "h160.27" ] ],
-    [ "rgb1:R", "uno:11", "red", [ "v0" ] ],
-    [ "rgb1:G", "uno:10", "blue", [ "v0" ] ],
-    [ "rgb1:B", "uno:9", "green", [ "v0" ] ]
-  ],
-  "dependencies": {}
+    [ "uno:10", "bz1:2", "green", [ "v-27", "h29" ] ],
+    [ "bz1:1", "uno:GND.1", "green", [ "v10", "h-42" ] ]
+  ]
 }
